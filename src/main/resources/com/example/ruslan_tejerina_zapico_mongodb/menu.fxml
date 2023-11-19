@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="900.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ruslan_tejerina_zapico_mongodb.MenuController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <children>
+      <AnchorPane prefHeight="772.0" prefWidth="877.0">
+         <children>
+            <Label layoutX="57.0" layoutY="151.0" prefHeight="25.0" prefWidth="117.0" text="Nombre jugador:" />
+            <TextField fx:id="tf_nombre" layoutX="57.0" layoutY="185.0" />
+            <TextField fx:id="tf_procedencia" layoutX="57.0" layoutY="251.0" />
+            <TextField fx:id="tf_altura" layoutX="57.0" layoutY="316.0" />
+            <TextField fx:id="tf_peso" layoutX="57.0" layoutY="380.0" />
+            <TextField fx:id="tf_posicion" layoutX="57.0" layoutY="439.0" />
+            <Label layoutX="57.0" layoutY="225.0" text="Procedencia:" />
+            <Label layoutX="57.0" layoutY="289.0" text="Altura (cm):" />
+            <Label layoutX="57.0" layoutY="351.0" text="Peso (kg):" />
+            <Label layoutX="57.0" layoutY="413.0" text="Posición:" />
+            <TableView fx:id="tabla_jugadores" layoutX="226.0" layoutY="64.0" prefHeight="480.0" prefWidth="517.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="39.0" text="Id" />
+                <TableColumn fx:id="col_nombre" prefWidth="138.0" text="Nombre" />
+                  <TableColumn fx:id="col_procedencia" prefWidth="101.0" text="Procedencia" />
+                  <TableColumn fx:id="col_altura" prefWidth="88.0" text="Altura" />
+                  <TableColumn fx:id="col_peso" prefWidth="77.0" text="Peso" />
+                  <TableColumn fx:id="col_posicion" prefWidth="72.0" text="Posición" />
+              </columns>
+            </TableView>
+            <Button fx:id="bt_insertar" layoutX="81.0" layoutY="481.0" mnemonicParsing="false" onAction="#agregarJugador" text="Insertar jugador" />
+            <Button fx:id="bt_modificar" layoutX="483.0" layoutY="562.0" mnemonicParsing="false" onAction="#modificarJugador" text="Modificar" />
+            <Button fx:id="bt_buscar" layoutX="405.0" layoutY="562.0" mnemonicParsing="false" onAction="#buscarJugadores" text="Buscar" />
+            <Button fx:id="bt_eliminar" layoutX="576.0" layoutY="562.0" mnemonicParsing="false" onAction="#eliminarJugador" text="Eliminar" />
+            <Button fx:id="bt_listar" layoutX="334.0" layoutY="562.0" mnemonicParsing="false" onAction="#visualizarJugadores" text="Listar" />
+            <Label layoutX="46.0" layoutY="497.0" />
+            <TextField fx:id="tf_id" layoutX="57.0" layoutY="110.0" prefHeight="17.0" prefWidth="68.0" />
+            <Label layoutX="59.0" layoutY="83.0" text="ID" />
+            <Label layoutX="167.0" layoutY="419.0" prefHeight="40.0" prefWidth="582.0" />
+            <TextArea layoutX="225.0" layoutY="633.0" prefHeight="90.0" prefWidth="517.0" text="                                                      Información de usuario: &#10;Buscar: puede buscar por nombre, procedencia o posición.&#10;Modificar: pulsa dos veces sobre el jugador de la tabla y modifica los campos pertinentes.&#10;Eliminar:  para eliminar un jugador con seleccionarlo en la tabla y pulsar en eliminar, se elimina&#10;" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
